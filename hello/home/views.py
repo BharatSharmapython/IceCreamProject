@@ -5,18 +5,14 @@ from django.contrib.messages import constants as messages
 from django.contrib import messages
 
 def index(request):
-    context = {
-        "variable1" : "this is sent",
-        "variable2" : "bharat is best"
-    }
-    
+
     return render(request, 'index.html')
+
 def about(request):
     return render(request, 'about.html')
 
 def services(request):
     return render(request, 'services.html')
-
 
 def contact(request):
     if request.method == "POST":
